@@ -63,7 +63,7 @@ app.get('/', (req, res) => {
       <p>Server running on port ${PORT}</p>
       <p>Environment: ${process.env.NODE_ENV || 'development'}</p>
       <script>
-        const socket = new WebSocket("ws://" + location.host);
+        const socket = new WebSocket("wss://" + location.host);
         socket.onmessage = event => {
           console.log("Message from server:", event.data);
         };
